@@ -1,5 +1,6 @@
 package damanpreet.singh.n01426028.mid;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -59,6 +60,15 @@ public class SinghBotFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_singh_bot, container, false);
+        View view = inflater.inflate(R.layout.fragment_singh_bot, container, false);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View textView = view.findViewById(R.id.textView2);
+        Bundle args = getArguments();
+
+        if(args != null){
+            String selecteditem = args.getString(getString(R.string.bottom_key));
+            //textView.setText(selecteditem);
+        }
+
+        return view;
     }
 }

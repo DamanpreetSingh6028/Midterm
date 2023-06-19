@@ -84,13 +84,13 @@ public class DamanTopFrag extends Fragment {
                 if(i > 0) {
                     String selecteditem = provinces[i];
 
-                    SinghBotFrag patelBotFrag = new SinghBotFrag();
+                    SinghBotFrag SinghBotFrag = new SinghBotFrag();
                     Bundle args = new Bundle();
                     args.putString(getString(R.string.top_key), selecteditem);
-                    patelBotFrag.setArguments(args);
+                    SinghBotFrag.setArguments(args);
 
                     FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                    transaction.replace(R.id.fragmentContainerView, patelBotFrag);
+                    transaction.replace(R.id.fragmentContainerView, SinghBotFrag);
                     transaction.addToBackStack(null);
                     transaction.commit();
 
